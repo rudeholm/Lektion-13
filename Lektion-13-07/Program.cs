@@ -20,12 +20,9 @@ public class SpelKaraktär
     public int Hälsa { get; private set; } = 45;
     public int MaxHälsa { get; private set; } = 45;
 
-    public void TaSkada(int mängd)
+    public void TaSkada(int skada)
     {
-        if (mängd > Hälsa)
-            Hälsa = 0;
-        else
-            Hälsa -= mängd;
+        Hälsa = Math.Max(0, Hälsa - skada);
         
         if (Hälsa <= 0)
             System.Console.WriteLine("Död!");
