@@ -7,7 +7,7 @@ implementering av metoden Rita().
 
 public abstract class GeometriskForm
 {
-    public string Färg { get; set; }
+    public string? Färg { get; set; }
     public abstract void Rita();
 }
 
